@@ -244,13 +244,13 @@ public final class RxCache {
      * 构造器
      */
     public static final class Builder {
-        private static final int MIN_DISK_CACHE_SIZE = 5 * 1024 * 1024; // 5MB
-        private static final int MAX_DISK_CACHE_SIZE = 50 * 1024 * 1024; // 50MB
+        private static final int MIN_DISK_CACHE_SIZE       = 5 * 1024 * 1024; // 5MB
+        private static final int MAX_DISK_CACHE_SIZE       = 50 * 1024 * 1024; // 50MB
         private static final int DEFAULT_MEMORY_CACHE_SIZE = (int) (Runtime.getRuntime().maxMemory() / 8);//运行内存的8分之1
-        private Integer memoryMaxSize;
-        private Long diskMaxSize;
-        private int appVersion;
-        private File diskDir;
+        private Integer        memoryMaxSize;
+        private Long           diskMaxSize;
+        private int            appVersion;
+        private File           diskDir;
         private IDiskConverter diskConverter;
 
         public Builder() {

@@ -11,9 +11,9 @@ public class TestBean {
      * pno : 1
      */
 
-    private int totalPage;
-    private int ps;
-    private int pno;
+    private int            totalPage;
+    private int            ps;
+    private int            pno;
     private List<ListBean> list;
 
     public int getTotalPage() {

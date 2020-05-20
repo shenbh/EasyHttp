@@ -7,6 +7,6 @@ class CacheHolder<T> {
         this.timestamp = timestamp;
     }
 
-    public T data;
+    public T    data;
     public long timestamp;
 }

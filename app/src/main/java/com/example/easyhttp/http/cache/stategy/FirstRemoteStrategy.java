@@ -33,12 +33,12 @@ public final class FirstRemoteStrategy implements IStrategy {
         Observable<CacheResult<T>> cache = RxCacheHelper.loadCache(rxCache, key, type, true);
         Observable<CacheResult<T>> remote;
         if (isSync) {
-            remote =  RxCacheHelper.loadRemoteSync(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
+            remote = RxCacheHelper.loadRemoteSync(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
         } else {
-            remote =  RxCacheHelper.loadRemote(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
+            remote = RxCacheHelper.loadRemote(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
         }
         return Observable
-                .concatDelayError(Arrays.asList(remote,cache))
+                .concatDelayError(Arrays.asList(remote, cache))
                 .take(1);
     }
 
@@ -47,12 +47,12 @@ public final class FirstRemoteStrategy implements IStrategy {
         Flowable<CacheResult<T>> cache = RxCacheHelper.loadCacheFlowable(rxCache, key, type, true);
         Flowable<CacheResult<T>> remote;
         if (isSync) {
-            remote =  RxCacheHelper.loadRemoteSyncFlowable(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
+            remote = RxCacheHelper.loadRemoteSyncFlowable(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
         } else {
-            remote =RxCacheHelper.loadRemoteFlowable(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
+            remote = RxCacheHelper.loadRemoteFlowable(rxCache, key, source, CacheTarget.MemoryAndDisk, false);
         }
         return Flowable
-                .concatDelayError(Arrays.asList(remote,cache))
+                .concatDelayError(Arrays.asList(remote, cache))
                 .take(1);
     }
 

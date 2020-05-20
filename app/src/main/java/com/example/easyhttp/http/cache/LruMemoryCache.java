@@ -16,8 +16,8 @@ import java.util.HashMap;
 class LruMemoryCache {
     private LruCache<String, Object> mCache;
     private HashMap<String, Integer> memorySizeMap;//储存初次加入缓存的size，规避对象在内存中大小变化造成的测量出错
-    private HashMap<String, Long> timestampMap;
-    private Occupy occupy;
+    private HashMap<String, Long>    timestampMap;
+    private Occupy                   occupy;
 
     public LruMemoryCache(final int cacheSize) {
         memorySizeMap = new HashMap<>();

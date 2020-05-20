@@ -8,9 +8,9 @@ import io.reactivex.functions.Function;
 public class CacheResult<T> {
 
     private ResultFrom from;
-    private String key;
-    private T data;
-    private long timestamp;
+    private String     key;
+    private T          data;
+    private long       timestamp;
 
     public CacheResult() {
     }

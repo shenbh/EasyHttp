@@ -19,7 +19,7 @@ import io.reactivex.functions.Predicate;
  */
 public final class FirstCacheTimeoutStrategy implements IStrategy {
     private boolean isSync;
-    private long milliSecond;
+    private long    milliSecond;
 
     /**
      * @param milliSecond 毫秒数
@@ -30,7 +30,7 @@ public final class FirstCacheTimeoutStrategy implements IStrategy {
 
     /**
      * @param milliSecond 毫秒数
-     * @param isSync 是否用同步的方式保存缓存
+     * @param isSync      是否用同步的方式保存缓存
      */
     public FirstCacheTimeoutStrategy(long milliSecond, boolean isSync) {
         this.isSync = isSync;

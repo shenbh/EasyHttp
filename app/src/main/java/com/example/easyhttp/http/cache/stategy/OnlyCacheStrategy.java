@@ -17,15 +17,15 @@ import io.reactivex.Observable;
  * 仅加载缓存
  * 作者: 赵成柱 on 2016/9/12 0012.
  */
-public final class OnlyCacheStrategy implements IStrategy  {
+public final class OnlyCacheStrategy implements IStrategy {
 
     @Override
     public <T> Observable<CacheResult<T>> execute(RxCache rxCache, String key, Observable<T> source, Type type) {
-        return RxCacheHelper.loadCache(rxCache, key, type,false);
+        return RxCacheHelper.loadCache(rxCache, key, type, false);
     }
 
     @Override
     public <T> Publisher<CacheResult<T>> flow(RxCache rxCache, String key, Flowable<T> source, Type type) {
-        return RxCacheHelper.loadCacheFlowable(rxCache, key, type,false);
+        return RxCacheHelper.loadCacheFlowable(rxCache, key, type, false);
     }
 }

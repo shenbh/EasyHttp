@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
 class CacheCore {
 
     private LruMemoryCache memory;
-    private LruDiskCache disk;
+    private LruDiskCache   disk;
 
     CacheCore(LruMemoryCache memory, LruDiskCache disk) {
         this.memory = memory;

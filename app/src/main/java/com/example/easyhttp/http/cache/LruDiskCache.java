@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
  */
 class LruDiskCache {
     private IDiskConverter mDiskConverter;
-    private DiskLruCache mDiskLruCache;
+    private DiskLruCache   mDiskLruCache;
 
 
     LruDiskCache(IDiskConverter diskConverter, File diskDir, int appVersion, long diskMaxSize) {
@@ -67,7 +67,7 @@ class LruDiskCache {
             long l = System.currentTimeMillis();
             edit.set(1, String.valueOf(l));
             edit.commit();
-            LogUtils.log("save:  value="+value+" , status="+true);
+            LogUtils.log("save:  value=" + value + " , status=" + true);
             return true;
         } catch (IOException e) {
             LogUtils.log(e);
@@ -78,7 +78,7 @@ class LruDiskCache {
                     LogUtils.log(e1);
                 }
             }
-            LogUtils.log("save:  value="+value+" , status="+false);
+            LogUtils.log("save:  value=" + value + " , status=" + false);
         }
         return false;
     }

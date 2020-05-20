@@ -6,7 +6,7 @@ import java.lang.reflect.Type;
 
 /**
  * 通用转换器
- *
+ * <p>
  * Created by Chu on 2016/9/10.
  */
 public interface IDiskConverter {
@@ -17,7 +17,7 @@ public interface IDiskConverter {
      * @param source
      * @return
      */
-    <T> T  load(InputStream source, Type type);
+    <T> T load(InputStream source, Type type);
 
     /**
      * 写入

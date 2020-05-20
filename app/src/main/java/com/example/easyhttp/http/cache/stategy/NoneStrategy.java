@@ -20,7 +20,7 @@ import io.reactivex.functions.Function;
  * 仅加载网络，不缓存
  */
 
-public final class NoneStrategy implements IStrategy  {
+public final class NoneStrategy implements IStrategy {
 
     private NoneStrategy() {
     }
